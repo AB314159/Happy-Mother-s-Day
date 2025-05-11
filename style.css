@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #ffd1dc, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .card-container {
+    perspective: 1000px;
+  }
+  
+  .card {
+    width: 320px;
+    height: 600px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-front {
+    background: #ffe0ec;
+    color: #d6336c;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    background: #fffafc;
+    text-align: center;
+  }
+  
+  .mom-photo {
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .heart {
+    width: 50px;
+    animation: beat 1s infinite;
+    margin-top: 20px;
+  }
+  
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+  
+  .message {
+    font-size: 1.1rem;
+    color: #333;
+    min-height: 120px;
+    padding: 10px;
+  }
+  
